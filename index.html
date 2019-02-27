@@ -1,0 +1,249 @@
+<!DOCTYPE html>   //DTD Document Type Definition 文档类型定义
+<html>
+<head>  //
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+// 网页模板：每一个网页中都会包含 DTD html head title meta body 
+
+head:
+	包含网页的标题 title 描述文档(可能被搜索引擎所使用到的一些信息) meta标签 对js php脚本的引用和css的引用
+	至少包含 title meta 这两个元素
+
+
+		 title：在浏览器窗口标题栏里显示的文本 称为网页标题 在此页面上添加书签  或者打印网页时可访问这一元素。
+		 mate ：描述网页特性 例如字符集  不成对使用
+
+body：
+	包含文本和元素可以直接显示到浏览器所展示的网页上  称作浏览器视窗(viewport) 
+<!--------------------------------------------------------------->
+标题元素
+	有六个级别h1~h6 块文本 h1到h6依次减小 标题将加粗显示
+段落元素
+	<p></p>
+	块显示
+对齐
+	align
+		center 居中对齐
+		rigth 右对齐
+		left 左对齐
+	可用在 块显示 元素里 H5中已经不用该属性 可通过设置css来设置
+
+换行元素
+	空元素
+	<br>
+块引用元素
+	左右边界有缩进
+	<blockquote></blockquote>
+短语元素
+	<abbr></abbr> 指出文本为缩写 用全名配置网页标题属性
+	<b></b>  根据使用惯例将文本设置为加粗显示 未强调额外的重要性
+	<cite></cite>  指出文本为引用或参考 以斜体显示
+	<code></code>  指出为程序代码示例 为固定空格的字体
+	<dfn></dfn>  指出某个单词或术语的定义 通常为斜体显示
+	<em></em> 强调文本与另一文本之间的关系 通常以斜体显示
+	<i></i> 根据使用习惯将文本设置为斜体显示 并未强调额外的重要性
+	<kbd></kbd> 指出需要用户输入文本 通常为指定空格的字体
+	<mark></mark> 突出显示文本以便于引用
+	<samp></samp> 显示程序实例输出 通常为固定空格的字体
+	<small></small> 法律上的免责声明和与注意事项 呈小号字体效果
+	<strong></strong> 特别重要：使文本从上下文中脱颖而出 通常以加粗显示
+	<sub></sub> 小段文本 在基线以下以下标方式呈现
+	<sup></sup> 小段文本 在基线以上以文本的方式呈现
+	<var></var> 指定并显示变量或程序输出 通常以斜体显示
+///
+有序列表
+	三中列表类型：描述型列表 / 有序列表 / 无序列表
+	#
+	<ol>//有序列表
+		<li> //列表项
+			
+		</li>
+	</ol>
+	#
+	类型属性 用于指定列表排序的符号
+	type = 1 ：数字
+		   A ：大写字母
+		   a ：小写字母
+		   I ：罗马字母
+		   i ：小写的罗马字母
+	起始值属性用于指定记数的起始点 start=
+	倒序属性用来配置降序排列的列表 reversed="reversed"
+无序列表
+	每个清单条目会显示一个着重号或别的列表标识
+	<ul>  //无序列表
+		<li> //列表条目	
+		</li>
+	</ul>
+	属性列表 tpye= circle 环形
+				   square 方形
+				   默认圆形
+描述列表
+	用于组织属于及其解释等内容有用
+	每个术语名称独占一行 且无缩进
+	其描述则另起一行并缩进显示
+	描述列表适用于组织常见问题与解答(FAQ)类内容
+	<dl>  //描述列表开始
+		<dt>  //术语
+			<dd> ///名称
+			</dd>
+		</dt>
+	</dl>
+///
+特殊字符
+	&copy； 版权符号
+	“   双引号   &quot;
+	'   单引号   &rsquo;
+	©   版权符号 &copy;
+	&   &符合号  &amp;
+	Empty space 不间断空格 &nbsp;
+	——  长的短划线 &mdash;
+	|   竖条   &#124;
+结构元素
+	分区元素 div
+		用于设置一般的结构区域 用于块显示 其上和其下都会换行
+	HTML结构性元素
+		 线框图：header
+		 		nav
+		 		main
+		 			div div div
+		 		footer
+
+		 Header 页眉元素
+		 		为网页文档或文档内的区域添加页眉
+		 		是块显示元素 通常包含不同级别的标题元素h1~h6
+		 Nav    导航链接元素
+		 		定义导航链接部分
+		 		是块显示元素
+		 Main   主体元素
+		 		规定网页文档的主要内容
+		 		每张网页上应当只有一个主体元素
+		 		块显示元素
+		 Footer 页脚元素
+		 		定义网页文档或节的页脚
+		 		块显示元素
+锚元素
+	使用该元素可以定义超链接
+	<a href=""></a>
+
+	绝对超链接 指向的是资源的绝对位置 http://....
+	相对超链接 指向的是资源的文件夹位置 ../index.html
+	网站地图   以图的方式展现了某个网站内网页的结构或组织
+	电子邮件超链接 E-mail 点击这种类型的连接会自动打开为浏览器配置的默认邮件程序 mailto:
+	块连接：块级锚 可以显示成块的元素 如div 一级标题h1 或者段落
+<!----------------------------------------------------------------------------------------------------------------------------->
+CSS:
+	Cascading Style Sheets 层叠样式表
+	使得网页的样子和它所呈现的样子分离开来
+	可用于文本 颜色 以及网页布局的配置
+	用于网页显示样式排版与网页布局说明
+###	
+使用CSS的方法有四种 ： 内联 嵌入 外部 导入
+		内联样式：代码写在网页的body部分，作为HTML标签的属性 样式的作用范围仅限于包含该属性的特定元素
+		嵌入样式（内部样式）：在网页的head部分定义样式。这些样式说明对整张网页文档起作用
+		外部样式：样式写在独立的一个文件中。在写网页时，通过在head部分配置链接元素与外部文本文件产生关联
+		导入样式：与外部样式类似，样式也是写在外部文本文件中，在网页中进行引用。通过使用@import 指令将外部样式倒入为嵌入样式，也可以导入到其他的外部样式表中。
+样式表由样式规则组成 样式规则由两部分组成：选择器和声明
+		
+		CSS样式规则选择器 可以是一个HTML元素名称 一个类名 或id名称 
+		CSS样式规则声明 指出设置的CSS属性以及分配给该属性的值
+
+		body{color：blue;background-color:yellow;}
+		选择器 声明属性 声明值
+
+
+		CSS 属性清单
+
+		background-color				某个元素的背景颜色				任意有效的颜色
+		color 							某个元素的前景(文本)色			任意有效颜色
+		font-family						某个字体或字体系列的名称			任意有效的字体或字体系列 如serif,sansserif,fantasy,monospace,cursive
+		font-size						字符大小							有多种变化	数字值：以pt（磅）为单位 或者以px（像素）为单位 	或者以em（相对当前字体中大写的M所占的宽度）为单位	百分比数值；文本值，xx-small，x-small，small，medium，large，x-large，xx-large
+		font-style						字符样式							Normal，italic，oblique
+		font-weight						规定字体的粗细					有多种变化 文本值：normal，bold，bolder，lighter/数值：100 200 ~900
+		line-height						设置行高							通常也是以百分比数值来呈现 200%对应的是2的行距
+		margin							简写属性，						用于配置某个元素的外边距属性		一个数值（以px或em为的单位），例如body{margin：10px}将页面边距设为10像素，在消除边距时不要加上px或em单位，body{margin:0}为正确写法
+		margin-left						配置元素左外边距值				一个数值（以px或em为单位），auto或0
+		margin-right					配置元素右外边距值				一个数值（以px或em为单位），auto或0
+		text-align						规定文本的水平对齐方式			Center(居中)，justify(两端对齐)，left(左对齐),right(右对齐)
+		text-decoration					确定文本是否需要加下划线；通常用于超链接	如果设置为none，那么浏览器显示的有超链接的文本就不象通常所作的那样带下划线了
+		text-indent						配置文本首行的缩进方式			一个数值(px/em为单位)，auto或百分比
+		text-shadow						规定添加到文本的阴影效果(CSS3)    二到四个数值，用于指定水平位移 纵向位移	模糊半径	扩散距离	再标一个颜色值
+		text-transform					控制文本的大小写					none(无，默认)	capitalize(首字母大写)	uppercase(全部大写)	lowercase(全部小写)
+		white-space						规定如何处理元素中的空白			normal(默认)		nowrap	pre pre-line	pre-wrap
+		width							元素内容的宽度					分比
+网页配色：
+	RGB:red green blue 数值从0~255
+	RED:#FF0000
+	GREEN:#00FF00
+	Blue:#0000FF
+	Black:#000000
+	White:#FFFFFFF
+	Grey:#CCCCCC
+网页安全色：
+	8位色彩显示器	 00 33 66 99 CC FF	
+HSL颜色码：色相	饱和度	明度
+
+颜色使用：	
+		1. p{color:red;} 颜色名称
+		2. p{color:#FF0000;} 十六进制颜色码
+		3. p{color：#F00;} 简写的十六进制颜色码 一个字符代表一种原色
+		4. p{color：#rgb(255,0,0)} 十进制简写颜色码（RGB三原色）
+		5. p{color：hsl(0,100%,50%)} HSL颜色码
+	RGBA 多一个Alpha透明度
+	HSLA 多一个Alpha透明度
+
+//////////////////////////////////////////////////////
+内联使用CSS
+//////////////////////////////////////////////////////
+嵌入使用CSS
+在页面head节中设置 写在<style></style>元素中 使用XHTML语法时要在<style>标签设定一个类型属性</style>值是css或text指明MIME类型
+/////////////////////////////////////////////////////
+用CSS配置文本
+	p{font-family:Arial,Helvetica,sans-serif;}
+
+	serif				有衬线字体 在字的笔画开始 结束的地方有额外的装饰;通常用作标题
+	sans-serif			无衬线字体，通常用作网页文本
+	monospace           等宽字体 通常用作代码示例
+	cursive				手写字体 在网页上难以辨认
+	fantasy				夸张的样式 有时用作标题
+
+	使用@font-face 提供设计字体位置 显示时 会先下载到本地再显示
+		font-face{font-family：myAwesomeFont;src:url(myAwesomeFont.woff) format("woff");}
+	更多CSS字体属性
+		font-size值类别：
+			文本值：xx-small，x-small,small,medium默认,large,x-large,xx-large   当浏览器里的文本大小发生变化时 能较好的缩放 为文本尺寸提供的选项有限
+			px像素单位: 10px  相对于显示器分辨率而言的 ；并不是每种浏览器都能随文本大小变化而很好的缩放
+			pt镑单位: 10pt	用于配置网页的打印版本 并不是每种浏览器都能随文本的大小变化而很好的缩放
+			em：.75em W3c推荐 能很好的随浏览器的缩放而缩放 为文本尺寸提供的选项较多
+			百分比值： 75% W3c推荐 能很好的缩放 选项较多
+为多个HTML标签或类设置相同的样式
+	在样式规则表前列出多个选择器，每个选择器之间加逗号分隔
+		p,li{font-size:lem;}
+选择器：
+	类选择器：
+		为某个类设置样式时 类名就是选择器 在类名称前放置一个点
+		.feature{line-height:200%;font-weight:bold;font-style:italic}
+		<li class="feature">Usability Students</li>
+	id选择器：
+		类选择器可以在相同的页面上使用很多次，id选择器只能使用一次
+		在设置id的样式时 在样式表id名前加上#
+		id名称可以是数字字母下划线 不能有空格
+		#main{line-height:200%;}
+		<div id="main"></div>
+	派生选择器：
+		可以减少各种类和id的数量
+		容器选择器 特定选择器 样式
+		main p{color：#0f0;}
+Span元素
+	div元素其上下行都会有空行 span元素设置一个区域与其他内容没有物理分离这种方式称为内联显示
+使用外部样式表
+	外部样式表是一个拓展名为.css的文本文件
+连接元素
+	连接元素将外部样式表文件与网页关联起来 被放置在head中 是一个单独使用的空标签 有三个属性 rel href type
+	rel 的值是 stylesheet
+	href 的值是样式表文件的名称
+	type 属性的值是 text/css 即CSS的MIME类型
+	

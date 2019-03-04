@@ -1,0 +1,57 @@
+body{
+	background-color: #E6E6FA;
+	color: #191970;
+	font-family:Arial,Verdana,sans-serif;
+
+}
+h1{
+	line-height: 200%;
+	color: #E6E6FA;
+	font-family: Georgia,"Times New Roman",serif;
+	text-shadow: 3px 3px 5px #CCC;
+	height: 86px;
+}
+h2{
+	background-color: #AEAED4;
+	color: #191970;
+	font-family: Georgia,"Times New Roman",serif;
+	text-align: center;
+	border-bottom: 2px dashed #191970;
+}
+p{
+	font-size: .90em;
+	text-indent: 3em;
+}
+ul{
+	font-weight: bold;
+}
+nav{
+	font-weight: bold;
+	font-size: 1.25em;
+}
+.feature{
+	color: #C70000;
+}
+footer{
+	color: #333;
+	font-size: .75em;
+	font-style: italic;
+	border-top: thin solid #aeaed4;
+	padding-top: 10px;
+}
+.company{
+	font-weight: bold;
+	font-family: Georgia,"Times New Roman",serif;
+	font-size: 1.25em;
+}
+#wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+#figure{
+	align-content: center;
+	width:640px;
+	padding: 5px;
+
+}

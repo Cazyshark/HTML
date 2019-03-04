@@ -246,4 +246,269 @@ Span元素
 	rel 的值是 stylesheet
 	href 的值是样式表文件的名称
 	type 属性的值是 text/css 即CSS的MIME类型
+用CSS实现HTML元素居中
+		将整张网页实现居中
+			<body>
+				<div id="wrapper">
+					...page content goes here...
+				</div>
+			</body>
+		example:
+			#wrapper{
+						width:700px;
+						margin-left:auto;
+						margin-right:auto;
+					}
+CSS添加注释
+	简介注释/* www.php.org */
+层叠
+	浏览器默认设置→外部样式→嵌入样式→内联样式→HTML属性  由外及里
+///
+视觉元素与图像
+	THML水平分割线元素
+		<hr> 可将页面上不同的区域分隔开来 也可被用来值是文中主题的中断或更换
+	CSS边框和边框属性
+		border
+		border-width 边框宽度
+		border-color 边框颜色
+		border-style 边框样式
+		border-top 	 顶边
+		border-right 右边框
+		border-left	 左边框
+		border-bottom底边框
+		
+	边框样式属性
+		insert		3Dinsert边框
+		outset		3Doutset边框
+		double		双线边框
+		groove		3D凹槽边框
+		ridge		3D垄状边框
+		solid		实线边框
+		dashed		虚线边框
+		dotted		点状边框
+
+	exmaple：
+		.dashedborder{
+			border-width:3px;
+			border-style:dashed;
+			border-color:#000033;
+		}
+		or
+		.dashedborder{
+			border:3px dashed #000033;
+		}
+
+	内边距属性
+		padding 配置了HTML元素与边框的距离 称为内边框属性 默认为0
+
+	要用到的CSS属性
+		background-attachment			设置背景图像是固定还是随着页面的其余部分滚动			Fixed固定	scroll可滚动默认
+		background-clip					规定背景的绘制区域									padding-box	border-box/content-box
+		background-image				为元素设置背景图像									指定图像的url路径 none不显示图像
+		background-origin				规定背景图片的定位区域								padding-box	border-box/content-box
+		background-position				设置背景图像的开始位置								两个百分比值或者像素值 第一个值是水平位置第二个位置是垂直位置 从容器元素的左上角开始 也可以使用文本值left top bottom right
+		background-repeat				设置是否重复以及如何重复背景图像						T文本值 repeat(默认) repeat-y(垂直方向重复) repeat-x(水平方向重复)	no-repeat(不重复) space round
+		background-size					规定背景图片的尺寸									两个百分比值 像素值 auto contain(全屏幕) cover 第一个指定宽度 第二个指定高度 如果只给一个另一个默认auto
+		border							边框													ex
+		border-bottom					简写 在一个声明中设置所有的下边框属性					指定border-width	border-style border-color
+		border-bottom-left-radius		定义边框左下角属性									一个数值或百分比 指定角的半径
+		border-radius					为某元素添加圆角边框									一至四个数值 或百分比用于指定各个角的半径 左上 右上 右下 左下
+		box-shadow						为方向框添加一个或多个阴影								二至四个数值	以指定水平位移 垂直位移 模糊半径 拓展距离 以及一个颜色值
+		height							设置元素高度											一个像素或百分比
+		linear-gradient					设置从一个颜色到另一种颜色的线性混合阴影				用于设置渐变起始点和颜色值 example:linear-gradient(#FFF,#8FA5CE)
+		max-width						设置元素的最大宽度									一个像素或百分比
+		min-width						设置元素的最小宽度									一个像素或百分比
+		opacity							定义元素的不透明级别									介于1(不透明)都0(完全透明)之间的一个数值 所有子元素都会继承该属性
+		padding							简化写法 设置所有内边距属性							单个数值或百分比 所有边框的内边距为此值
+																							两个数值或百分比	第一个是上下边框 第二个是左右边框的内边距
+																							三个数值或百分比	第一个设置上 第二个设置左右 第三个设置下
+																							四个数值或百分比	分别为 上	右	下	左
+		padding-bottom					设置下边框的
+		padding-left					设置左边框的
+		padding-right					设置右边框的
+		padding-top						设置上边框的
+		radial-gradient					设置从一种颜色到另一种颜色的径向混合阴影
+///
+图像类型：
+	GIF	图像互换格式图片  	纯色或简单几何形状的图片 颜色不超过256种 使用GIF89A格式 可设置图像透明度
+		动画GIF可使用Adoble Fireworks来制作
+		使用无损压缩的方式来进行的
+		GIF图像优化通常是在Adobe Photoshop，Adobe Fireworks或GIMP等图像处理软件中通过减少图片的的颜色数量来实现的
+		交错	浏览器在渲染或显示文档的时候 从顶部开始 依次逐行开始 当只有50%的文件被下载时 浏览器才显示 GIF图片文件可设置为交错模式 交错的图片时逐渐显示的 下载的时候有一种淡入的效果 一开始很模糊逐渐清晰起来
+	JPEG联合专家小组 最适用于照片 可包含1670种颜色 不能设置透明度 也不能实现动画效果 拓展名为 .jpg 或 .jpeg
+		是使用有损压缩的方式来进行的
+
+	像素效果 pixelation
+	另一种优化网页图片的方式是使用缩略图 thumbnail的方式 将缩略图做成超链接	访客点击它的时候会显示较大的图像 
+		创建JPEG图片时可将它设置成渐进式progrssive 图片是逐渐显示的 在下载时也有淡入的效果
+	PNG 可移植网络图形格式
+		能支持数百万色 支持不同的透明度 采用无损压缩的格式 支持交错结果
+	WebP 是谷歌开发的一种图片格式
+			改进了图片有损压缩的方式
+图像元素
+	<img src="指定图片位置" height="高度" width="宽度" alt="图片的替代文本">
+	是一个空元素 不需要成对开始和结束标签
+
+	属性表
+		align：对齐方式 right left top middle bottom
+		alt：对图片进行描述的文字
+		border：以像素为单位的图片边框粗细 border
+		height：高度
+		hspace：以像素为单位的土拍你左右两侧的空白间距
+		id：文本名称 由字母和数字组成 字母开头
+		name：文本名称 由数字和字母组成 以字母开头 不能有空格
+		src：图片的URL或文件名
+		title：包含图片信息的文本 通常比alt文本更有描述性
+		vspace：以像素为单位的图片上下两边的空白间距 
+		width:宽度
+HTML5 视觉元素
+	HTML5 Figure元素
+			块显示的figure元素容纳一个自包含的内容单位 
+			Figcaption元素
+				用于设置图片的说明性文字
+	HTML5 Meter 元素
+		度量衡元素 用来在已知范围内显示带数值的可视化尺度 通常为柱状图的一部分
+			属性
+				value 显示的数值
+				min   范围内可能的最小值
+				max	  范围内可能的最大值
+	HTML5 Progress 元素
+		用于显示特定范围内在数值的进度条
+			属性
+				value 显示的数值
+				max   范围内可能的最大值
+背景图像
+	使用 CSS background-color：#ff9;可设置页面的背景色
+	使用CSS 的 background-image:url(texturl.png) 可配置网页的背景图片
 	
+	可同时配置网页的背景色和背景图片 背景色会先先显示 当网页的背景图片加载完毕后 该图片就成为网页背景
+	body{background-color：#9cc;
+		 background-image:url(background.jpg);}
+	一般来说网页的背景图要比网页小一点 背景图的形状不是又细又长的矩形 就是小的矩形块
+	浏览器会默认重复(平铺)图片来覆盖整个网页
+		
+	background-repeat属性
+		浏览器会默认重复(平铺)图片来覆盖整个网页 该特性同时也适用于标题 段落等其他元素的背景
+			属性值
+			repeat(默认)
+			repeat-y 纵向重复
+			repeat-x 横向重复
+			no-repeat 不重复
+			space 重复图片通过调整周围的空白使图片不被裁剪或改变大小
+			round 重复图片通过缩放图片的维度使图片不被裁剪或改变大小
+	background-position属性
+		可指定图片的起始位置 有效的background-position属性包括 百分比值 像素值 left top center botton right
+		第一个值 指定水平起始位置 第二个值 指定垂直起始位置 默认为center
+		w 1525 h 28 d 1525.3
+	background-attachment属性
+		可用来指定背景图片的位置是保持不变还是会随着浏览器实况的网页一起滚动
+		有效值包括
+		fixed和scroll(默认)两种
+	图像映射(image map)
+		将一个图片作为一个或多个超链接来使用 一个图片中有多个可点击区域 用来链接到其他的网页或网站 可选区域被称为热点(hotspots)
+		该记术可以创建三种形状的可选区域 分别为 矩形 圆形和多边形 图像映射要用到 图像元素 映射元素以及 一个或多个区域元素
+
+		映射元素(map element)
+			是一种容器标签 指定了图像映射的开始和结束位置
+			name属性用于将<map>标签与对应的图像关联起来 id属性必须于name属性的取值相同
+			使用图像标签的usemap属性将映射元素于图像关联起来 指定是使用哪个map
+		区域元素(area element)
+			用于定义可点击区域的坐标或边界 是一个空标签 有 href alt title shape coords等属性 href 用于指定点击该区域后将要条状到的网页 alt属性为屏幕阅读器提供了描述性文本 title 属于配置文本 鼠标悬停时出现的描述性文本 coords 指定了可点击区域的坐标位置
+					不同形状所要求的坐标
+						矩形(rect)			x1 y1 x2 y2 (x1,y1)代表矩形的左上角位置 点(x2,y2)代表矩形右下角位置
+						圆形(circle)  		x,y,r		圆心位置 以及半径
+						多边形(polygon) 		x1,y1,x2,y2,x3... 每一个点坐标代表多边形一个顶点的位置
+					example:
+						<map name="boat" id="boat">
+							<area shape="rect" coords="24,188,339,283" href="http://www.fishingdoorcounty.com" alt="Door Country Fishing Charter">
+						</map>
+						<img src="fishingboat.jpg" usemap="#boat" alt="Door Country " width="416" height="350">
+	收藏图标
+		favorite icon - favicon
+		大小 16x16 / 32x32 
+
+		配置收藏图标
+			使用link元素将 favicon.ico文件与网页关联起来
+			需要三个属性值 rel href type 
+				rel 值是 icon
+				href 的值是图像文件名 
+				type 属性值是图像的MIME类型 默认为 iamge/x-icon 即拓展名为 .ico的文件
+
+			example：
+				<link rel="icon" type="image/x-icon" href="favicon.ico">
+			为了兼容ie
+				<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	图像切割
+		CSS精灵
+			CSS	Sprite 一个图像文件是由多个小图形组成的 可作为各种网页元素的背景图
+CSS3视觉效果
+	CSS3 background-clip属性 
+			定义了背景图像的绘制区域
+			content-box 在内容后面绘制背景
+			padding-box 在内容和内边距后面绘制背景
+			border-box 默认值 在内容 内边距和边框后面绘制背景
+	CSS3 background-origin属性
+			指定了背景图像的位置
+			content-box 相对于内容区域的位置
+			padding-box 相对于内边框区域的位置
+			border-box  相对于边框区域的位置
+	CSS3 background-size属性
+			用来重新定义或缩放背景图像的尺寸
+			一对 百分比值 或 像素值 宽度或高度
+			cover
+			把背景图像拓展至高度和宽度能完全覆盖背景区域的最小尺寸 保持宽高比
+			contain
+			把背景图像拓展至高度和宽度能完全适应内容区域的最大尺寸 保持宽高比
+	
+	CSS3 对多张背景图像的处理
+			example: 	background: url(url1) no-repeat bottom,url(url2) repeat;
+	CSS3 圆角效果
+			border-radius
+			由一个到四个数字组成 用于指定角的弧度半径
+			顺序为 左上 右上 右下 左下
+	CSS3 box-shadow属性
+			能够为div和段落等块显示元素制造阴影效果
+			需要设置水平位移位置 垂直位移位置 模糊半径 阴影尺寸 以及颜色等
+			水平偏移位置(Horizontal offset):数字像素值  正右 负左
+			垂直偏移位置(Vertical offset):数字像素值 正下 符上
+			模糊半径(Blur radius) 默认为0
+			阴影尺寸(Spread distance) 像素值 默认为0 正值配置一个拓展的阴影 赋值配置一个缩小的阴影
+			颜色值(color) 有效的颜色数值
+
+			example： box-shadow:5px 5px 5px #828282;
+					  box-shadow:insert 5px 5px 5px #828282;
+	CSS3 opacity属性
+			用于设置元素的透明度
+			取值范围从0到1
+			该属性会对文本和背景同时生效	
+	CSS3 RGBA颜色	
+		rbga使用十进制而不是十六进制来表示
+		设置透明度 RGBA和opacity 属性有什么不同 s
+		opacity会将文本和背景元素都生效
+		而RBGA只会对设置的元素改变颜色
+
+		此外还可以通过配置filter属性的alpha属性来改变透明度
+			example:alpha(opacity=60(1~100));
+	CSS3 HSLA颜色
+		HSLA 基于色轮模式 用色调(hue) 饱和度(saturation) 亮度(lighting) 透明度(alpha) 来表示的 目前主流的浏览器均支持HSLA模式
+		色轮 红色在上 绿色在右 蓝色在左 范围从0到360度 色调就是实际的颜色 
+		红色用0 或者 360度来表示
+		绿色用 120来表示
+		蓝色用 240来表示
+		在配置黑色 灰色 和白色时  要将hue设置成0 饱和度设置成(saturation)表示颜色的强度 以百分比值来表示(全饱和100% 灰色为0%)
+		亮度(lightness)决定了颜色是亮还是暗 也是由百分比值来表示(正常为50% 白色为100% 黑色为0%)
+		透明度(alpha) 取值范围从0(透明)到1(不透明)
+
+		example:
+			RED： hsla(360,100%,50%,1.0)
+			GREEN: hsla(120,100%,50%,1.0)
+			BLUE: hsla(240,100%,50%,1.0)
+			BLACK:hsla(0,0%,0%,1.0)
+			GREY:hsla(0,0%,50%,1.0)
+			WHITE:hsla(0,0%,100%,1.0)
+
+	CSS3 渐变
+		从一种颜色到另一种颜色的平滑过渡
+		W3C 已经在 CSS Image Value 和 Replaced  Content 模块中增加了对渐变的支持 目前处于草稿状态
+		为background-image 指定一个gradient 函数即可 先用关键词短语 to bottom to top to left to right 来证明渐变方向 然后分别列出其实和结束的颜色
+			example：background-image:linear-gradient(to bottom,#fff，#0f0)			  

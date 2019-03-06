@@ -511,4 +511,29 @@ CSS3视觉效果
 		从一种颜色到另一种颜色的平滑过渡
 		W3C 已经在 CSS Image Value 和 Replaced  Content 模块中增加了对渐变的支持 目前处于草稿状态
 		为background-image 指定一个gradient 函数即可 先用关键词短语 to bottom to top to left to right 来证明渐变方向 然后分别列出其实和结束的颜色
-			example：background-image:linear-gradient(to bottom,#fff，#0f0)			  
+			example：background-image:linear-gradient(to bottom,#fff，#0f0)	
+页面布局
+	1.盒模型
+		文档中每一元素被认为是一个矩形盒子 
+		盒子是由(从内到外) 内容 内边距 边框 外边距组成
+
+	内容
+		内容区域由文本和其他元素组成的		页面上元素的可见宽度为内容，内边距，与边框三者宽度的总和 
+		width属性 设置了内容的实际宽度 它并不包括内边距 边框 和 外边框
+	内边距
+		Padding 指 内容与边框之间的区域 默认内边距为0 某个元素的背景属性对内边距和属性区域是一样的
+	边框
+		边框是位于内边距和外边距之间的区域 默认边框为0 即不显示边框 我们使用border属性来设置元素的边框
+	外边距
+		外边距Margin 是指元素和相邻元素之间的空白区域
+		使用margin属性来设置某个元素在各个方向上的外边距 这一区域总是处于透明状态 显示的是网页或父亲元素的背景色  对于网页文档以及特定的段落 标题 表单等元素 浏览器自带默认的外边距值 指定margin就能覆盖
+		外边距是数值类型 单位为px或em 设置为auto 将由浏览器设置外边距
+	盒模式的作用
+		当两个外边距相遇时浏览器会将两者折叠 取其中较大值 而不是将两者相加
+
+	正常流
+		浏览器根据.html文档中的舒徐逐行呈现网页代码 该 过程称为正常流(normal flow)
+	CSS浮动
+		float属性 让一个元素在另一个元素的左右浮动 效果
+		float:right 将元素浮动到容器的右侧
+		float:left	元素浮动带容器的左侧		  

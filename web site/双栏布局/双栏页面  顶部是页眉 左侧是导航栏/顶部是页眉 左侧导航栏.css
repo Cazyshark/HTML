@@ -1,0 +1,15 @@
+nav{
+	float: left;
+	width: 150px;
+	background-color: #FFF;
+}
+#rightcol{
+	margin-left: 155px;
+	background-color: #ffe8f0;
+}
+#wrapper{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #b3c7e6;
+}
